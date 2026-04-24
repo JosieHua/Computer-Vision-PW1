@@ -24,6 +24,9 @@
 </head>
 <body>
 <div class="debug-info">
+  <strong>Exercise 1: Kitchen Environment</strong><br>
+  <strong>Exercise 2: Humanoid Robot (Hierarchical Modeling)</strong><br>
+  <strong>Exercise 3: Lighting and Shadow</strong><br>
   <strong>Exercise 4: Animation and Interaction</strong><br>
 </div>
 <canvas id="c"></canvas>
@@ -53,7 +56,7 @@ function MinecraftWoman(scene, x = 0, y = 0, z = 0) {
     const eyeMaterial = new THREE.MeshStandardMaterial({ color: 0x000000 });
     const legMaterial = new THREE.MeshStandardMaterial({ color: 0x5D3A1A });
     
-    // ===== LEGS (two single cubes) - these stay on ground =====
+    // LEGS (two single cubes) - these stay on ground 
     const leftLegGeo = new THREE.BoxGeometry(0.35, 0.5, 0.35);
     const leftLeg = new THREE.Mesh(leftLegGeo, legMaterial);
     leftLeg.position.set(-0.25, 0.25, 0);
@@ -68,7 +71,7 @@ function MinecraftWoman(scene, x = 0, y = 0, z = 0) {
     rightLeg.receiveShadow = true;
     group.add(rightLeg);
     
-    // ===== BODY (dress) =====
+    //  BODY (dress)
     const bodyGeo = new THREE.BoxGeometry(0.8, 0.9, 0.4);
     const body = new THREE.Mesh(bodyGeo, dressMaterial);
     body.position.set(0, 0.95, 0);
